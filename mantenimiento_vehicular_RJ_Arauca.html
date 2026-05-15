@@ -1557,8 +1557,8 @@ function mostrarPaginaEncuesta(d){
       }
       const btn=document.getElementById('btn-env');btn.disabled=true;btn.innerHTML='Enviando...';
       // Guardar en Supabase
-      const SURL='${SUPABASE_URL}';
-      const SKEY='${SUPABASE_ANON_KEY}';
+      const SURL='https://jbbnlnsrcaviamesspwy.supabase.co';
+      const SKEY='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImpiYm5sbnNyY2F2aWFtZXNzcHd5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzg4NjQyMzQsImV4cCI6MjA5NDQ0MDIzNH0.Vy4wIchoYC5BH4wxrX2G94gN0_0SQlOJhw4X7eVXLhE';
       fetch(SURL+'/rest/v1/mantenimientos?id=eq.'+encodeURIComponent(regId),{
         method:'PATCH',
         headers:{'Content-Type':'application/json','apikey':SKEY,'Authorization':'Bearer '+SKEY,'Prefer':'return=minimal'},
